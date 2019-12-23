@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+class Fruit
+{
+    char name,taste,size;
+    Scanner sc=new Scanner(System.in);
+    void eat()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the name of the fruit");
+        name = sc.next().charAt(0);
+        System.out.println("enter the taste of the fruit");
+        taste = sc.next().charAt(0);
+        System.out.println("enter the size of the fruit");
+        size = sc.next().charAt(0);
+    }
+}
+    class apple extends Fruit
+    {
+        void eat()
+        {
+            System.out.println("apple");
+            System.out.println("sweet");
+            System.out.println("big");
+        }
+        
+    }
+    class orange extends Fruit
+    {
+        void eat()
+        {
+            System.out.println("orange");
+            System.out.println("sour and sweet");
+            System.out.println("small");
+    }
+}
+public class overriding
+{
+    public static void main(String args[])
+    {
+        apple A=new apple();
+        A.eat();
+        orange O=new orange();
+        O.eat();
+    }
+}
